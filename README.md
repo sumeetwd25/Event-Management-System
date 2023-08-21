@@ -1,4 +1,4 @@
-# Welcome to Event-Management-System 
+# Welcome to Event-Management-System
 
 ## Project: Event Management System Web Application using Java Platform
 
