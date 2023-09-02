@@ -4,6 +4,6 @@ import com.demo.beans.Bookings;
 
 public interface CateringService {
 
-	void addNewCatering(Bookings b);
+	void addNewCatering (Bookings b);
 
 }

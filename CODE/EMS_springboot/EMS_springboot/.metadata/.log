@@ -1,0 +1,16 @@
+!SESSION 2023-08-22 14:53:24.545 -----------------------------------------------
+eclipse.buildId=4.28.0.20230608-1200
+java.version=19.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -data D:\Project Codes\MAJOR-PROJECT\CODE\EMS_springboot\EMS_springboot -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.emf.ecore 2 0 2023-08-22 14:53:43.467
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY ch.qos.logback.classic 1 0 2023-08-22 14:53:45.064
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-08-22 14:53:56.835
+!MESSAGE Logback config file: D:\Project Codes\MAJOR-PROJECT\CODE\EMS_springboot\EMS_springboot\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.1.200.20230523-2106.xml

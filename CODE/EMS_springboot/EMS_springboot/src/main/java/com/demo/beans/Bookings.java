@@ -3,6 +3,8 @@ package com.demo.beans;
 
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
@@ -11,6 +13,7 @@ import javax.persistence.OneToOne;
 @Entity
 public class Bookings {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int event_id;
 	private String event_name;
 	private String start_time;
@@ -29,6 +32,13 @@ public class Bookings {
 	@OneToOne
 	@JoinColumn(name="media_id")
 	private Media media;
+	@OneToOne
+	@JoinColumn(name="payment_id")
+	private Payment payment;
+	
+//	@OneToOne
+//	@JoinColumn(name="email_id")
+	private String email_id;
 	
 	
 	public Bookings() {
@@ -38,7 +48,7 @@ public class Bookings {
 
 
 	public Bookings(int event_id, String event_name, String start_time, String end_time, String date, int exp_attendee,
-			Venue venue, Catering catering, Decoration decoration, Media media) {
+			Venue venue, Catering catering, Decoration decoration, Media media, Payment payment, String email_id) {
 		super();
 		this.event_id = event_id;
 		this.event_name = event_name;
@@ -50,22 +60,20 @@ public class Bookings {
 		this.catering = catering;
 		this.decoration = decoration;
 		this.media = media;
+		this.email_id = email_id;
+		this.payment = payment;
 	}
-	
-	
 
 
-//	public Bookings(int event_id, String event_name, String start_time, String end_time, String date,
-//			int exp_attendee, int venue_id, int catering_id, int decoration_id, int media_id) {
-//		super();
-//		this.event_id = event_id;
-//		this.event_name = event_name;
-//		this.start_time = start_time;
-//		this.end_time = end_time;
-//		this.date = date;
-//		this.exp_attendee = exp_attendee;
-//		this.venue_id
-//	}
+
+	public String getEmail_id() {
+		return email_id;
+	}
+
+
+	public void setEmail_id(String email_id) {
+		this.email_id = email_id;
+	}
 
 
 	public int getEvent_id() {
@@ -166,17 +174,24 @@ public class Bookings {
 	public void setMedia(Media media) {
 		this.media = media;
 	}
+	
+	public Payment getPayment() {
+		return payment;
+	}
+
+
+	public void setPayment(Payment payment) {
+		this.payment = payment;
+	}
 
 
 	@Override
 	public String toString() {
 		return "Bookings [event_id=" + event_id + ", event_name=" + event_name + ", start_time=" + start_time
 				+ ", end_time=" + end_time + ", date=" + date + ", exp_attendee=" + exp_attendee + ", venue=" + venue
-				+ ", catering=" + catering + ", decoration=" + decoration + ", media=" + media + "]";
+				+ ", catering=" + catering + ", decoration=" + decoration + ", media=" + media + ", payment=" + payment
+				+ ", email_id=" + email_id + "]";
 	}
-	
-	
-	
 	
 	
 	

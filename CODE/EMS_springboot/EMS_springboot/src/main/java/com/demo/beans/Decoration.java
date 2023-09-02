@@ -1,27 +1,28 @@
 package com.demo.beans;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Decoration {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int decoration_id;
-	private String floral_decor;
-	private String balloon_decor;
-	private String other_decor;
+	private String decor_type;
+	private int decor_cost;
 
 	public Decoration() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Decoration(int decoration_id, String floral_decor, String balloon_decor, String other_decor) {
+	public Decoration(int decoration_id, String decor_type, int decor_cost) {
 		super();
 		this.decoration_id = decoration_id;
-		this.floral_decor = floral_decor;
-		this.balloon_decor = balloon_decor;
-		this.other_decor = other_decor;
+		this.decor_type = decor_type;
+		this.decor_cost = decor_cost;
 	}
 
 	public int getDecoration_id() {
@@ -32,34 +33,26 @@ public class Decoration {
 		this.decoration_id = decoration_id;
 	}
 
-	public String getFloral_decor() {
-		return floral_decor;
+	public String getDecor_type() {
+		return decor_type;
 	}
 
-	public void setFloral_decor(String floral_decor) {
-		this.floral_decor = floral_decor;
+	public void setDecor_type(String decor_type) {
+		this.decor_type = decor_type;
 	}
 
-	public String getBalloon_decor() {
-		return balloon_decor;
+	public int getDecor_cost() {
+		return decor_cost;
 	}
 
-	public void setBalloon_decor(String balloon_decor) {
-		this.balloon_decor = balloon_decor;
-	}
-
-	public String getOther_decor() {
-		return other_decor;
-	}
-
-	public void setOther_decor(String other_decor) {
-		this.other_decor = other_decor;
+	public void setDecor_cost(int decor_cost) {
+		this.decor_cost = decor_cost;
 	}
 
 	@Override
 	public String toString() {
-		return "Decoration [decoration_id=" + decoration_id + ", floral_decor=" + floral_decor + ", balloon_decor="
-				+ balloon_decor + ", other_decor=" + other_decor + "]";
+		return "Decoration [decoration_id=" + decoration_id + ", decor_type=" + decor_type + ", decor_cost="
+				+ decor_cost + "]";
 	}
 
 }
