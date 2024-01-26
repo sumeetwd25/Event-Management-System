@@ -16,8 +16,8 @@
 
 ## Technologies used:-
 1. Backend: Java Springboot.
-2. Database: MySql Database.
-3. Frontend: React JS.
+2. Database: MySql.
+3. Frontend: JavaScript, Node.js, ReactJS, Bootstrap.
 4. IDE: Eclipse,VS Code,MySql workbench.
   
 ## Explore the Code
